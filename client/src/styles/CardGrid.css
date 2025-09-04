@@ -1,0 +1,75 @@
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 40px;
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  width: 630px;
+  height: 400px;
+  opacity: 1;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.cardContent {
+  flex: 1;
+  background: #ececec;
+}
+
+.cardFooter {
+  height: 22%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3% 3%;
+}
+
+.row {
+  display: flex;
+  color: #ffffff;
+  padding-right: 10%;
+}
+
+.footerTitle {
+  justify-content: flex-start;
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0px;
+  line-height: 34px;
+}
+
+.footerStats {
+  justify-content: space-between;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0px;
+}
+
+.footerMeta {
+  width: 62%;
+  justify-content: space-between;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0px;
+}

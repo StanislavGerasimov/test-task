@@ -1,0 +1,206 @@
+.header {
+  width: 100%;
+  height: 80px;
+  transform: rotate(0deg);
+  opacity: 1;
+  background: #172234;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttonDiv {
+  position: relative;
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 6%;
+}
+
+.logIn {
+  width: 48%;
+  height: 44px;
+  border-radius: 5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  gap: 10px;
+  opacity: 1;
+  border-width: 1px;
+  border: 1px solid #b29f7e;
+  background: transparent;
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #b29f7e;
+}
+
+.signUp {
+  width: 48%;
+  height: 44px;
+  border-radius: 5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  gap: 10px;
+  opacity: 1;
+  background: #b29f7e;
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.userSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userEmail {
+  width: 40%;
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #b29f7e;
+  margin-right: 0%;
+}
+
+.mainDiv {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../local/bg_main.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.mainDiv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #172234;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+.textDiv {
+  width: 75%;
+  min-height: 270px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.headingDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  gap: 10px;
+}
+
+.heading {
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: clamp(28px, 6vw, 75px);
+  line-height: 80px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0%;
+}
+
+.headingText {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: clamp(14px, 3vw, 28px);
+  letter-spacing: -2%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.textButton {
+  border-width: 1px;
+  opacity: 1;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  border: 1px solid #ffffff;
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: clamp(16px, 4vw, 24px);
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.deals {
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #b29f7e;
+  margin: 40px;
+}
+
+@media (max-width: 768px) {
+  .mainDiv {
+    height: 500px;
+  }
+  .textDiv {
+    width: 90%;
+  }
+  .headingText {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .textDiv {
+    width: 95%;
+  }
+  .textButton {
+    width: 100%;
+  }
+}
