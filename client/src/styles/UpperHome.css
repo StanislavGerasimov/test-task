@@ -38,6 +38,12 @@
   text-align: center;
   vertical-align: middle;
   color: #b29f7e;
+  transition: all 0.2s ease;
+}
+
+.logIn:hover {
+  background: #5a5040;
+  color: #ffffff;
 }
 
 .signUp {
@@ -56,6 +62,12 @@
   letter-spacing: 0px;
   text-align: center;
   vertical-align: middle;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.signUp:hover {
+  background: #8e6f3e;
   color: #ffffff;
 }
 
@@ -171,12 +183,19 @@
   letter-spacing: 0px;
   color: #ffffff;
   background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.textButton:hover {
+  background: #ffffff;
+  color: #172234;
+  cursor: pointer;
 }
 
 .deals {
   font-family: Merriweather;
   font-weight: 700;
-  font-size: 28px;
+  font-size: clamp(18px, 4vw, 32px);
   line-height: 34px;
   letter-spacing: 0px;
   vertical-align: middle;
@@ -202,5 +221,36 @@
   }
   .textButton {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .buttonDiv {
+    width: 100%;
+    margin-right: 0;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+
+  .logIn,
+  .signUp {
+    width: 48%;
+    margin: 0;
+  }
+
+  .userSection {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .userEmail {
+    width: 48%;
+    text-align: left;
+  }
+
+  .logIn {
+    width: 48%;
+    text-align: center;
   }
 }

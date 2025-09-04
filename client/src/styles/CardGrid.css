@@ -7,15 +7,10 @@
   padding: 40px;
 }
 
-@media (max-width: 900px) {
-  .cardGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .card {
-  width: 630px;
-  height: 400px;
+  width: 100%;
+  max-width: 630px;
+  aspect-ratio: 16 / 10;
   opacity: 1;
   box-shadow: 0px 4px 4px 0px #00000026;
   background: #fff;
@@ -35,24 +30,27 @@
 
 .cardFooter {
   height: 22%;
+  min-height: 60px;
   width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 3% 3%;
+  margin-top: 0;
 }
 
 .row {
   display: flex;
   color: #ffffff;
   padding-right: 10%;
+  flex-wrap: wrap;
 }
 
 .footerTitle {
   justify-content: flex-start;
   font-family: Merriweather;
   font-weight: 700;
-  font-size: 24px;
+  font-size: clamp(16px, 2.5vw, 24px);
   letter-spacing: 0px;
   line-height: 34px;
 }
@@ -61,7 +59,7 @@
   justify-content: space-between;
   font-family: Lato;
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 18px);
   letter-spacing: 0px;
 }
 
@@ -70,6 +68,38 @@
   justify-content: space-between;
   font-family: Lato;
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 18px);
   letter-spacing: 0px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 2000px) {
+  .cardGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+  .cardFooter {
+    max-height: 30%;
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardFooter {
+    height: 32%;
+  }
+  .footerTitle {
+    font-size: clamp(12px, 5vw, 16px);
+    line-height: 1.2;
+  }
+  .footerStats,
+  .footerMeta {
+    font-size: clamp(10px, 4vw, 12px);
+    line-height: 1.2;
+  }
 }

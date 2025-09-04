@@ -32,7 +32,7 @@ const SignUpPage = () => {
         <div className="photoDiv"></div>
         <div className="loginSection">
           <div className="loginDiv">
-            <p className="bigText">Login</p>
+            <p className="bigText">Registration</p>
             <div className="inputBlock">
               <p className="inputText">Email</p>
               <input

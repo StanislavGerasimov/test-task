@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .bigText {
@@ -142,4 +142,59 @@ body {
 .signUpLink:hover {
   text-decoration: underline;
   color: #8e6f3e;
+}
+
+@media (max-width: 768px) {
+  .pageDiv {
+    flex-direction: column;
+  }
+
+  .photoDiv {
+    display: none;
+  }
+
+  .loginSection {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+    padding: 0;
+  }
+
+  .loginDiv {
+    width: 90%;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .bigText {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .inputBlock {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .inputField {
+    width: 94%;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .forgotText {
+    font-size: 13px;
+  }
+
+  .loginButton {
+    height: 44px;
+    font-size: 15px;
+    margin-top: 16px;
+  }
+
+  .signUpText {
+    font-size: 12px;
+    margin-top: 12px;
+  }
 }
