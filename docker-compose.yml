@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_here
+      MYSQL_DATABASE: RealEstateDB
+      MYSQL_USER: realestate_user
+      MYSQL_PASSWORD: strong_password_here
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_password_here"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  server:
+    build: ./server
+    container_name: nest_server
+    env_file: ./server/.env
+    ports:
+      - "5000:5000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  client:
+    build: ./client
+    container_name: react_client
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+
+volumes:
+  mysql_data:
