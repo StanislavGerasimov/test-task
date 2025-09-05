@@ -52,7 +52,7 @@ const LoginPage = () => {
               <p className="inputText">Password</p>
               <input
                 className="inputField"
-                type="text"
+                type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

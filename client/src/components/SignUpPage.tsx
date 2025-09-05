@@ -53,7 +53,7 @@ const SignUpPage = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button className="loginButton" onClick={handleRegister}>
+            <button className="loginButton reg" onClick={handleRegister}>
               Sign In
             </button>
           </div>

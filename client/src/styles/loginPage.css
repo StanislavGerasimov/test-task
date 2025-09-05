@@ -72,7 +72,7 @@ body {
 }
 
 .inputField {
-  width: 94%;
+  width: 93%;
   height: 48px;
   opacity: 1;
   top: 23px;
@@ -142,6 +142,10 @@ body {
 .signUpLink:hover {
   text-decoration: underline;
   color: #8e6f3e;
+}
+
+.reg {
+  margin-top: 15px;
 }
 
 @media (max-width: 768px) {

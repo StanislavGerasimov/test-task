@@ -246,11 +246,15 @@
 
   .userEmail {
     width: 48%;
-    text-align: left;
+    text-align: center;
   }
 
   .logIn {
     width: 48%;
     text-align: center;
+  }
+
+  .deals {
+    margin-bottom: 2%;
   }
 }
