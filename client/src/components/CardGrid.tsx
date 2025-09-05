@@ -21,7 +21,7 @@ const CardGrid: React.FC<CardGridProps> = ({ properties }) => {
     <div className="cardGrid">
       {properties.map((property) => {
         const filename = property.photo.split("/").pop();
-        const imageUrl = `http://localhost:5000/cards/${filename}`;
+        const imageUrl = `/cards/${filename}`;
 
         return (
           <div

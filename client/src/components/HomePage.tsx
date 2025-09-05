@@ -24,7 +24,7 @@ const HomePage = () => {
   const userEmail = useSelector((state: RootState) => state.user.email);
 
   useEffect(() => {
-    fetch("http://localhost:5000/properties")
+    fetch("/properties")
       .then((res) => res.json())
       .then((data) => setProperties(data))
       .catch((err) => console.error("Error fetching properties:", err));
