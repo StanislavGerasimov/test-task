@@ -33,7 +33,7 @@ services:
     build: ./client
     container_name: react_client
     ports:
-      - "3000:80"
+      - "3000:80" #changed to "80:80" in production to fit in AWS security rules. prefferable to keep using 3000 port in development because 80 port is often already in use.
     depends_on:
       - server
 
